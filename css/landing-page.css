@@ -1,0 +1,234 @@
+.header {
+    background-image: linear-gradient(to top right, #ffffff, rgba(190,149,238,0.5)),url(../images/prdoctor-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    height:95vh;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+.header-top {
+    color: white;
+    background-color: #371669;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.logo {
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/mm-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: block;
+    font-size: 0;
+
+}
+
+.logo-box {
+    margin-left: 15px;
+}
+
+.header-options li {
+    list-style-type: none;
+    display: inline;
+    margin-left: 40px;
+}
+
+.header-content {
+    width: 100%;
+    text-align: center;
+}
+
+
+.actions-wrapper-animated{
+    display:flex;
+    justify-content:center;
+    animation: moveButtonsIn 1.5s ease-in;
+}
+
+.actions-wrapper-initial{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.actions-wrapper-animated button,.actions-wrapper-initial button {
+    font-size: 25px;
+    width: 10em;    
+    background-image: linear-gradient(to top right, #F37532,rgb(238, 47,49));
+    margin: 5px;
+}
+
+.heading{
+    position: absolute;
+    top: 35%;
+    width: 100%;
+}
+
+.heading-text-animated{
+    text-align: center;
+    line-height: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    animation: fadeIn 2s ease-in;
+}
+
+.heading-text-initial{
+    opacity: 0;
+}
+
+.heading-text-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading-text > span{
+    width:50%;
+}
+
+.heading-text__main{
+    display: block;
+    font-size: 45px;
+}
+
+.heading-text__sub{
+    display: block;
+    line-height: 2.5em;
+}
+
+h1.section-heading {
+    text-align: center;
+    font-size: 45px;
+}
+
+.horizontal-slider {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 0.5em;
+    grid-column-gap: 0.5em;
+    padding: 2em;
+}
+@keyframes popUp {
+    0% {
+        transform: scale(0.4);
+    }
+    
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn{
+      0%{
+          opacity: 0.1;
+      }
+
+      25%{
+          opacity: 0.25;
+      }
+
+      75%{
+          opacity: 0.75;
+      }
+      100%{
+          opacity: 1;
+      }
+
+  }
+@keyframes moveButtonsIn {
+    0%{
+        justify-content: flex-start;
+    }
+    100%{
+        justify-content: center;
+    }
+}
+
+.section-about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: ghostwhite;
+    min-height: 700px;
+}
+.card-animated{
+    padding: 21px;
+    text-align: center;
+    box-shadow: rgb(240 231 251) 0px 7px 29px 0px;
+    height: 7em;
+    animation: popUp 0.4s ease-in;
+    transform: scale(1);
+    overflow: auto;
+    text-overflow: ellipsis;
+    max-height: 7em;
+    background-color: white;
+}
+.card {
+    padding: 21px;
+    text-align: center;
+    box-shadow: rgb(240 231 251) 0px 7px 29px 0px;
+    height: 7em;
+}
+
+.card-initial{
+    transform: scale(0);
+}
+
+horizontal-slider::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+ }
+
+.main{
+    background-color: white;
+}
+
+@media only screen and (max-width: 740px) {
+    .header-content {
+        height: 6vh;
+    }
+
+    .logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .logo-box {
+        width: 10%;
+    }
+}
+
+.footer-section{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+    line-height: 2;
+    background-color: #371669;
+}
+
+.footer-section p{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
