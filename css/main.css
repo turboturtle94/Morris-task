@@ -67,5 +67,7 @@ button.btn-with-animation:hover::after{
         font-size: 10px;
         font-weight:200;
     }
-
+    button.btn{
+        font-size: 10px;
+    }
 }
