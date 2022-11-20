@@ -40,12 +40,40 @@
 
 .logo-box {
     margin-left: 15px;
+    margin-right: 15px;
 }
 
-.header-options li {
-    list-style-type: none;
-    display: inline;
-    margin-left: 40px;
+.header-options {
+ 
+    display: flex;
+    justify-content: space-around;
+    width: 30em;
+}
+.header-options div{
+    height: 3em;
+    position: relative;
+    width: 100%;
+}
+
+.header-options div:hover {
+    background-color: #F0E5FA;
+    border: 0.5px solid #371669;
+    color: #371669;
+    cursor: pointer;
+}
+
+
+.header-options div>label{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: max-content;
+   cursor: pointer;
+}
+
+.header-options li:hover {
+    cursor: pointer;
 }
 
 .header-content {
@@ -57,7 +85,7 @@
 .actions-wrapper-animated{
     display:flex;
     justify-content:center;
-    animation: moveButtonsIn 1.5s ease-in;
+    animation: moveButtonsIn 0.5s ease-in;
 }
 
 .actions-wrapper-initial{
@@ -85,7 +113,7 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    animation: fadeIn 2s ease-in;
+    animation: fadeIn 1s ease-in;
 }
 
 .heading-text-initial{
@@ -154,10 +182,10 @@ h1.section-heading {
   }
 @keyframes moveButtonsIn {
     0%{
-        justify-content: flex-start;
+        transform: scale(1.2);
     }
     100%{
-        justify-content: center;
+        transform: scale(1);
     }
 }
 
@@ -233,4 +261,39 @@ horizontal-slider::-webkit-scrollbar {
     align-items: center;
     width: 50%;
     text-align: center;
+}
+
+button.btn-with-animation{
+    transition: all .35s;
+    position:relative;
+}
+
+button.btn-with-animation::after{
+    border-radius: 5px;
+    z-index: 1;
+    content: "";
+    color: white;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#371669;
+    transition: all .35s;
+}
+
+button.btn-with-animation:hover {
+  color: white;
+}
+
+button.btn-with-animation span{
+    position: relative;
+    z-index: 2;
+}
+button.btn-with-animation:hover::after{
+    width: 100%;
+}
+
+button.btn-initial{
+    transform: scale(0);
 }

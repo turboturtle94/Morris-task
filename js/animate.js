@@ -33,6 +33,11 @@ function animateHeader(){
 
 function animateHeaderButtons(){
     let buttonsDiv = $(".actions-wrapper-initial")[0];
+    let buttons = buttonsDiv.children;
     $(buttonsDiv).removeClass("actions-wrapper-initial");
     $(buttonsDiv).addClass("actions-wrapper-animated");
+    for(const button of buttons){
+      $(button).removeClass("btn-initial");
+      $(button).addClass("btn-animated");
+    }
 }

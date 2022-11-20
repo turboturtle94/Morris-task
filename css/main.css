@@ -27,40 +27,13 @@ button.btn{
     font-size: 25px;
 }
 
+
+
 button.btn:hover{
     cursor: pointer;
 }
 
-button.btn-with-animation{
-    transition: all .35s;
-    position:relative;
-}
 
-button.btn-with-animation::after{
-    border-radius: 5px;
-    z-index: 1;
-    content: "";
-    color: white;
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background:#371669;
-    transition: all .35s;
-}
-
-button.btn-with-animation:hover {
-  color: white;
-}
-
-button.btn-with-animation span{
-    position: relative;
-    z-index: 2;
-}
-button.btn-with-animation:hover::after{
-    width: 100%;
-}
 
 @media only screen and (max-width: 740px){
     body{
@@ -68,6 +41,6 @@ button.btn-with-animation:hover::after{
         font-weight:200;
     }
     button.btn{
-        font-size: 10px;
+        font-size: 10px !important;
     }
 }
