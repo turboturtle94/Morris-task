@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/form.css" rel="stylesheet" />
+    <title>Morris Media | Get seen, heard and remembered</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-box">
+                <a href="#" class="logo"></a>
+            </div>
+            <div class="header-options">
+                <div>
+                    <label>
+                        Solutions
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Who we serve
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Self help
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div id="form-container">
+        <form id="main-form">
+            <div class="main-form__fields"><label class="main-form__fields-label main-form__fields__mandatory">Full
+                    Name</label><input type="text" required id="name" class="main-form__fields-input"/>
+                <label class="main-form__fields-label main-form__fields__mandatory">Designation</label><input
+                    type="text" required id="designation" class="main-form__fields-input"/>
+                <label class="main-form__fields-label main-form__fields__mandatory">Work Email</label><input type="text"
+                    id="email" required class="main-form__fields-input"/>
+                <label class="main-form__fields-label main-form__fields__mandatory">Phone Number</label><input
+                    type="text" required id="phone" class="main-form__fields-input"/>
+                <label class="main-form__fields-label main-form__fields__mandatory">Website URL</label><input
+                    type="text" required id="url" class="main-form__fields-input"/>
+                <label class="main-form__fields-label">Brand name</label><input type="text" />
+                <label class="main-form__fields-label">Leads for</label>
+                <select id="customer-type">
+                    <option>
+                        Individual
+                    </option>
+                    <option>
+                        Company
+                    </option>
+                    <option>
+                        Agency
+                    </option>
+                    <option>
+                        My client
+                    </option>
+                </select>
+                <label id="emp-count-label" class="emp-count-label-initial main-form__fields-label">Head count</label>
+                <select id="emp-count-select" class="emp-count-select-initial">
+                    <option>
+                        Self-employed
+                    </option>
+                    <option>
+                        1-10
+                    </option>
+                    <option>
+                        11-50
+                    </option>
+                    <option>
+                        51-200
+                    </option>
+                    <option>
+                        201-500
+                    </option>
+                    <option>
+                        501-1000
+                    </option>
+                    <option>
+                        1001-5000
+                    </option>
+                    <option>
+                        5001-10,000
+                    </option>
+                    <option>
+                        10,000+
+                    </option>
+                </select>
+                <label class="main-form__fields-label">How did you hear about us</label><input type="text" />
+            </div>
+            <button class="btn btn-with-animation btn-initial" type="submit" id="form-submit-button"><span>Submit</span></button>
+        </form>
+    </div>
+    </main>
+    <footer>
+        <section class="footer-section">
+            <p>A Dedicated Team Of Digital Doctors
+                Awaits You
+            </p>
+            <p>
+                Get in touch with our digital doctors and discuss your goals and vision so they understand you better
+                and devise the best plan for you.
+            </p>
+
+            <button class="btn"><span>Schedule A Call</span></button>
+        </section>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="./js/form-animate.js"></script>
+</html>

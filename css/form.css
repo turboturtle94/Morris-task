@@ -1,0 +1,225 @@
+.main {
+    background-color: rgba(190, 149, 238, 0.5);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-y: scroll;
+    height: 95vh;
+}
+
+#main-form {
+    width: 60vw;
+    background-color: ghostwhite;
+    padding: 2em;
+    box-shadow: rgb(240 231 251) 0px 10px 45px 14px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+}
+
+.main-form__fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-form__fields input[type="text"],
+.main-form__fields select,
+.main-form__fields textarea {
+    border: none;
+    height: 2.5em;
+    margin: 0.5em;
+    border-radius: 5px;
+    box-shadow: rgb(240 231 251) 0px 10px 45px 0;
+    padding: 0.5em;
+}
+
+.main-form__fields textarea{
+    height: 20em;
+}
+
+.main-form__fields input[type="text"]:focus,
+.main-form__fields input[type="text"]:focus-visible,
+.main-form__fields input[type="text"]:active,
+.main-form__fields select:focus-visible,
+.main-form__fields select:focus,
+.main-form__fields select:active,
+.main-form__fields textarea:focus-visible,
+.main-form__fields textarea:focus,
+.main-form__fields textarea:active {
+    border: none;
+    height: 2.5em;
+    margin: 0.5em;
+    border-radius: 5px;
+    box-shadow: rgb(240 231 251) 0px 10px 45px 0;
+    padding: 0.5em;
+    border: 0.5px solid violet;
+    outline: 0.5px solid violet;
+}
+
+label.main-form__fields-label {
+    font-weight: 400;
+}
+label.main-form__fields__mandatory::after{
+    content: "*";
+}
+
+
+.header-top {
+    color: white;
+    background-color: #371669;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/mm-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: block;
+    font-size: 0;
+
+}
+
+.logo-box {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.header-options {
+
+    display: flex;
+    justify-content: space-around;
+    width: 30em;
+}
+
+.header-options div {
+    height: 3em;
+    position: relative;
+    width: 100%;
+}
+
+.header-options div:hover {
+    background-color: #F0E5FA;
+    border: 0.5px solid #371669;
+    color: #371669;
+    cursor: pointer;
+}
+
+
+.header-options div>label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    cursor: pointer;
+}
+
+.footer-section {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+    line-height: 2;
+    background-color: #371669;
+}
+
+
+.emp-count-select-initial,.emp-count-label-initial{
+    display: none;
+    transform: scale(0);
+}
+
+.emp-count-select-animated{
+    display: initial;
+    border: none;
+    height: 2.5em;
+    margin: 0.75em;
+    border-radius: 5px;
+    box-shadow: rgb(240 231 251) 0px 10px 45px 0;
+    padding: 0.5em;
+    transform: scale(1);
+    animation: zoomOut 0.5s ease-in;
+}
+
+.emp-count-label-animated{
+    animation: zoomOut 0.5s ease-in;
+}
+
+.main-form__fields__error{
+    box-shadow: 0 0 0.5em red !important;
+}
+.main-form-error{
+    animation: shake 0.2s ease-in-out 0s 2;
+}
+
+button.btn{
+    height: 2em;
+    width: 10em;
+    font-size: 16px;
+    font-weight: 400;
+}
+button.btn-with-animation{
+    transition: all .35s;
+    position:relative;
+}
+
+button.btn-with-animation::after{
+    border-radius: 5px;
+    z-index: 1;
+    content: "";
+    color: white;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#371669;
+    transition: all .35s;
+}
+
+button.btn-with-animation:hover {
+  color: white;
+}
+
+button.btn-with-animation span{
+    position: relative;
+    z-index: 2;
+}
+button.btn-with-animation:hover::after{
+    width: 100%;
+}
+
+.form-container{
+    margin-bottom: 2em;
+}
+
+@keyframes zoomOut {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% { margin-left: 0rem; }
+    25% { margin-left: 0.5rem; }
+    75% { margin-left: -0.5rem; }
+    100% { margin-left: 0rem; }
+}

@@ -72,9 +72,6 @@
    cursor: pointer;
 }
 
-.header-options li:hover {
-    cursor: pointer;
-}
 
 .header-content {
     width: 100%;
